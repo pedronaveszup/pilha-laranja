@@ -1,0 +1,15 @@
+:root {
+  --landscape-width: 20;
+  --portrait-width: 80vw;
+  --header-height: 4rem;
+  --secs: 0.4s;
+  --bg-left: #F5F6F7;
+  --bg-main: white;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}

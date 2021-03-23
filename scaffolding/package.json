@@ -1,0 +1,27 @@
+{
+  "name": "foundation",
+  "version": "1.0.0",
+  "description": "orange-foundation",
+  "scripts": {
+    "start": "webpack serve --mode=development --devtool=source-map",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 3002",
+    "clean": "rm -rf dist"
+  },
+  "author": "Pedro Naves",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "serve": "^11.3.2",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
