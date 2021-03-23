@@ -1,7 +1,8 @@
 import React from 'react'
 import { loadComponent, useDynamicScript } from '../utils/rendering'
+import Loading from '../components/Loading'
 
-const LazyComponent = ({system}) => {
+const DynamicComponent = ({system}) => {
   const { ready, failed } = useDynamicScript({
     url: system && system.url,
   });
@@ -11,7 +12,7 @@ const LazyComponent = ({system}) => {
   }
 
   if (!ready) {
-    return <h2>Loading dynamic script: {system.url}</h2>;
+    return <Loading />;
   }
 
   if (failed) {
@@ -23,10 +24,10 @@ const LazyComponent = ({system}) => {
   )
 
   return (
-    <React.Suspense fallback="Loading Component...">
+    <React.Suspense fallback={<Loading />}>
       <Component />
     </React.Suspense>
   )
 }
 
-export default LazyComponent
+export default DynamicComponent

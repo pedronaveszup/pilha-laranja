@@ -28,6 +28,10 @@ module.exports = {
           presets: ["@babel/preset-react"],
         },
       },
+      {
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   output: {
@@ -40,6 +44,7 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/App",
+        "./Card": "./src/components/Card",
       },
       shared: { 
         "react": { singleton: true },
