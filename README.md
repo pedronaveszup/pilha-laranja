@@ -1,6 +1,7 @@
 Up backend (port 3000)
 ```
 cd backend
+yarn
 node .
 ```
 
