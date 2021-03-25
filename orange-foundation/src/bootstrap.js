@@ -2,4 +2,10 @@ import App from "./App";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+class OrangeFoundation extends HTMLElement {
+  connectedCallback() {
+    ReactDOM.render(<App />, this);
+  }
+}
+
+customElements.define('orange-foundation', OrangeFoundation);

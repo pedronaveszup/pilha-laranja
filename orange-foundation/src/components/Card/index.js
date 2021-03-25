@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 
 const Card = ({children}) => (
-  <div class='card'>
+  <div className='card'>
     {children}
   </div>
 )

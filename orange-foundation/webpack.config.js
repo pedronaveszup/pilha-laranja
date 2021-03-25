@@ -43,7 +43,7 @@ module.exports = {
       name: "foundation",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": "./src/App",
+        "./App": "./src/index",
         "./Card": "./src/components/Card",
       },
       shared: { 

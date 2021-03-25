@@ -24,19 +24,15 @@ const init = async () => {
               "url": "http://localhost:3002/remoteEntry.js",
               "scope": "foundation",
               "module": "./App",
-              "id": 1
+              "id": 1,
+              "component": "orange-foundation"
             },
             {
-              "url": "http://localhost:3002/remoteEntry.js",
-              "scope": "foundation",
-              "module": "./Card",
-              "id": 2
-            },
-            {
-              "url": "http://localhost:3003/remoteEntry.js",
+              "url": "http://localhost:4200/remoteEntry.js",
               "scope": "pipes",
               "module": "./Component",
-              "id": 3
+              "id": 2,
+              "component": "orange-pipes"
             },
           ]
         }

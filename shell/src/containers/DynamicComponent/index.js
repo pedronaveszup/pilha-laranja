@@ -1,6 +1,7 @@
 import React from 'react'
-import { loadComponent, useDynamicScript } from '../utils/rendering'
-import Loading from '../components/Loading'
+import { loadComponent, useDynamicScript } from '../../utils/rendering'
+import Loading from '../../components/Loading'
+import WebComponent from '../WebComponent'
 
 const DynamicComponent = ({system}) => {
   const { ready, failed } = useDynamicScript({
@@ -19,13 +20,14 @@ const DynamicComponent = ({system}) => {
     return <h2>Failed to load dynamic script: {system.url}</h2>;
   }
 
-  const Component = React.lazy(
+  if(!customElements.get(system.component)) {
     loadComponent(system.scope, system.module)
-  )
+  }
+  
 
   return (
     <React.Suspense fallback={<Loading />}>
-      <Component />
+      <WebComponent component={system.component} />
     </React.Suspense>
   )
 }
